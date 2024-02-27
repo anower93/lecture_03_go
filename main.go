@@ -6,21 +6,32 @@ import (
 	"fmt"
 )
 
-func update(a *int) {
-	fmt.Println(*a) //dereferencing and print
-	*a = *a + 10    //Assign pointer value and deferencing a variable  + new value
-}
+
 
 func main() {
 
-	x := 10 //assignment
+	// We are learning array
 
-	y := &x //referencing
+	var students [3] string
 
-	fmt.Println(y) // Accessing pointer variable value
+	students[0] = "Tahmid"
+	students[1] = "Aksa"
+	students[2] = "Abu Ubaida"
 
-	update(&x) //Accessing Memory Address
+	fmt.Println(students) // In this way we can declare array and pull data, retrieve data or get data
 
-	println(x) // Accessing
+	// Or we can write in short hand
+
+	teachers := [3] string {"Tahmid", "Abu Ubaida", "Aksa"}
+
+	fmt.Println(teachers)
+
+
+	//We can import unlimited data implicitly
+
+
+	ssc := [...] string {"Aman", "Zaman", "Rahman", "Lalcan"}
+
+	fmt.Println(ssc)
 
 }
